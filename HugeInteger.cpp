@@ -12,7 +12,6 @@ public:
     HugeInt(int value);
     HugeInt operator + (const HugeInt & arg) const;
     HugeInt operator * (const HugeInt & arg) const;
-    friend ostream &operator<<(ostream &out,const HugeInt &a);
 private:
     std::string m_str;
 };
@@ -27,12 +26,6 @@ HugeInt::HugeInt(std::string value)
 {
     m_str = value;
     std::reverse(m_str.begin(), m_str.end()); /* reversed string will be convinient for our use. */
-}
-
-ostream &operator<<(ostream &out,const HugeInt &a){
-    for (int i = a.m_str.size() - 1; i >= 0; i--)
-        cout << (short)a.m_str[i];
-    return cout;
 }
 
 HugeInt HugeInt::operator+ (const HugeInt& arg) const
