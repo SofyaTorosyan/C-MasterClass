@@ -1,5 +1,5 @@
 # C++-MasterClass
-1. HugeInt project
+1. HugeInt project \
 Implement a class which enables us to store and make arithmetic operations upon integers of huge sizes (several hundreds of digits long).
 
 
